@@ -51,4 +51,77 @@ Observando os termos no plural a colocação do "e", da vírgula entre outros. E
 
 
 def decompor_numero(numero: int):
-    """Escreva aqui em baixo a sua solução"""
+
+    if numero < 0:
+        return 'O número precisa ser positivo'
+    elif numero >= 1000:
+        return 'O número precisa ser menor que 1000'
+    elif numero == 0 or numero == 1:
+        return f'{numero} = {numero} unidade'
+    elif 1 < numero <= 9:
+        return f'{numero} = {numero} unidades'
+    elif 10 <= numero <= 99:
+        dezena = numero // 10
+        unidade = numero % 10
+        if numero == 10:
+            return f'{numero} = {dezena} dezena'
+        elif numero == 11:
+            return f'{numero}  =  {dezena} dezena e {unidade} unidade'
+        elif dezena > 1 and unidade == 1:
+            return f'{numero} = {dezena} dezenas e {unidade} unidade'
+        elif dezena > 1 and unidade > 1:
+            return f'{numero} = {dezena} dezenas e {unidade} unidades'
+        elif dezena > 1 and unidade ==0:
+            return f'{numero} = {dezena} dezenas'
+        else:
+            return f'{numero} = {dezena} dezena e {unidade} unidades'
+
+    elif 100 <= numero <= 999:
+        centena = numero // 100
+        resta = numero % 100
+        dezena = resta // 10
+        unidade = resta % 10
+
+        if numero == 100:
+            return f'{numero} = {centena} centena'
+        elif centena == 1 and dezena == 0 and unidade == 0:
+            return f'{numero} = {centena} centena'
+        elif centena == 1 and dezena == 1 and unidade == 1:
+            return f'{numero} = {centena} centena, {dezena} dezena e {unidade} unidade'
+        elif centena == 1 and dezena == 0 and unidade == 1:
+            return f'{numero} = {centena} centena e {unidade} unidade'
+        elif centena == 1 and dezena == 0 and unidade > 1:
+            return f'{numero} = {centena} centena e {unidade} unidades'
+        elif centena == 1 and dezena == 1 and unidade > 1:
+            return f'{numero} = {centena} centena, {dezena} dezena e {unidade} unidades'
+        elif centena > 1 and dezena == 0 and unidade == 0:
+            return f'{numero} = {centena} centenas'
+        elif centena > 1 and dezena == 1 and unidade == 0:
+            return f'{numero} = {centena} centenas e {dezena} dezena'
+        elif centena > 1 and dezena == 1 and unidade == 1:
+            return f'{numero} = {centena} centenas, {dezena} dezena e {unidade} unidade'
+        elif centena > 1 and dezena > 1 and unidade == 1:
+            return f'{numero} = {centena} centenas, {dezena} dezenas e {unidade} unidade'
+        elif centena > 1 and dezena == 1 and unidade > 1:
+            return f'{numero} = {centena} centenas, {dezena} dezena e {unidade} unidades'
+        elif centena > 1 and dezena == 0 and unidade > 1:
+            return f'{numero} = {centena} centenas e {unidade} unidades'
+        elif centena > 1 and dezena == 0 and unidade == 1:
+            return f'{numero} = {centena} centenas e {unidade} unidade'
+        elif centena > 1 and dezena > 1 and unidade == 0:
+            return f'{numero} = {centena} centenas e {dezena} dezenas'
+        elif centena > 1 and dezena > 1 and unidade > 1:
+            return f'{numero} = {centena} centenas, {dezena} dezenas e {unidade} unidades'
+
+
+    else:
+        return f'Digite novamente'
+
+
+if __name__ == '__main__':
+
+    numero = int(input('Insira número inteiro menor que 1000 e positivo: '))
+
+    msg = decompor_numero(numero)
+
+    print(msg)

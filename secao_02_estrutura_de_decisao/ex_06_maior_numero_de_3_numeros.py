@@ -16,4 +16,20 @@ Faça um Programa que leia três números e mostre o maior deles.
 
 
 def calcular_maior_de_3_numeros(x, y, z):
-    """Escreva aqui em baixo a sua solução"""
+
+    if x > y and x > z:
+        return x
+    elif y > z:
+        return y
+    else:
+        return z
+
+
+if __name__ == '__main__':
+
+    x = int(input('Digite 1° número: '))
+    y = int(input('Digite 2° número: '))
+    z = int(input('Digite 3° número: '))
+
+    msg = calcular_maior_de_3_numeros(x, y, z)
+    print(msg)

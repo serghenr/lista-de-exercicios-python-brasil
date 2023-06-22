@@ -30,4 +30,13 @@ Mostre o restultado com duas casas decimais
 
 
 def fazer_operacao_e_classificar(n_1: float, n_2: float, operacao: str):
-    """Escreva aqui em baixo a sua solução"""
+
+    n_1 = float(input('Digite o 1°: '))
+    n_2 = float(input('Digite o 2°: '))
+    operacao =  str(input('Qual operador: '))
+
+
+
+
+    print(f'Resultado: {}\n'
+          f'Número é {}, {} e {}.')

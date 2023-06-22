@@ -17,4 +17,39 @@ Faça um Programa que leia três números e mostre-os em ordem decrescente.
 
 
 def ordenar_decrescente(x, y, z):
-    """Escreva aqui em baixo a sua solução"""
+
+    if x > y and x > z:
+        maior = x
+        if y > z:
+            menor = z
+            meio = y
+        else:
+            menor = y
+            meio = z
+    elif y > z and y > x:
+        maior = y
+        if z > x:
+            menor = x
+            meio = z
+        else:
+            menor = z
+            meio = x
+    else:
+        maior = z
+        if y > x:
+            menor = x
+            meio = y
+        else:
+            menor = y
+            meio = x
+
+    print(f'{maior}, {meio}, {menor}')
+
+
+if __name__ == '__main__':
+
+    x = float(input('Digite 1° número: '))
+    y = float(input('Digite 2° número: '))
+    z = float(input('Digite 3° número: '))
+
+    msg = ordenar_decrescente(x, y, z)

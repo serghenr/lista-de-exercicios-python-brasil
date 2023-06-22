@@ -28,4 +28,33 @@ se digitar outro valor deve aparecer valor inválido.
 
 
 def calcular_dia_da_semana(numero: int):
-    """Escreva aqui em baixo a sua solução"""
+
+    if numero == 1:
+        dia_da_semana = """'Domingo'"""
+    elif numero == 2:
+        dia_da_semana = """'Segunda'"""
+    elif numero == 3:
+        dia_da_semana = """'Terça'"""
+    elif numero == 4:
+        dia_da_semana = """'Quarta'"""
+    elif numero == 5:
+        dia_da_semana = """'Quinta'"""
+    elif numero == 6:
+        dia_da_semana = """'Sexta'"""
+    elif numero == 7:
+        dia_da_semana = """'Sábado'"""
+    elif numero == 8:
+        dia_da_semana = """'Dia Inválido'"""
+    elif numero == 0:
+        dia_da_semana = """'Dia Inválido'"""
+    else:
+        dia_da_semana = """'Dia Inválido'"""
+
+    print(dia_da_semana)
+
+
+if __name__ == '__main__':
+
+    numero = int(input('Digite um número e exiba o dia correspondente da semana: '))
+
+    msg = calcular_dia_da_semana(numero)

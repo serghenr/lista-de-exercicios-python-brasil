@@ -11,10 +11,23 @@ Retorne: F - Feminino ou M - Masculino. Para quaisquer outros valores, retorne S
     'M - Masculino'
     >>> f_ou_m('Z')
     'Sexo inválido'
-    >>> f_ou_m(1)
+    >>> f_ou_m('1')
     'Sexo inválido'
 """
 
 
 def f_ou_m(sexo):
-    """Escreva aqui em baixo a sua solução"""
+
+    if sexo == 'F':
+        return 'F - Feminino'
+    elif sexo == 'M':
+        return 'M - Masculino'
+    else:
+        return 'Sexo inválido'
+
+
+if __name__ == '__main__':
+
+    sx = str(input('Digite F - Feminino ou M - Masculino: '))
+    msg = f_ou_m(sx)
+    print(msg)

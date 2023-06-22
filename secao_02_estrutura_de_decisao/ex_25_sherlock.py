@@ -32,4 +32,20 @@ Caso contrário, ele será classificado como "Inocente".
 
 
 def investigar(telefonou: str, estava_no_local: str, mora_perto: str, devia: str, trabalhou: str, ):
-    """Escreva aqui em baixo a sua solução"""
+
+
+    if telefonou == True and estava_no_local == True and mora_perto == True and deveia == True and trabalhou == True:
+        return 'Assassino'
+    elif telefonou == False and estava_no_local == False and mora_perto == False and deveia == False and trabalhou == False:
+        return 'Inocente'
+
+
+if __name__ == '__main__':
+
+    telefonou = str(input("Telefonou para a vítima? "))
+    estava_no_local = str(input("Esteve no local do crime? "))
+    mora_perto = str(input("Mora perto da vítima? "))
+    deveia = str(input("Devia para a vítima? "))
+    trabalhou = str(input("Já trabalhou com a vítima? "))
+
+    msg = investigar(telefonou, estava_no_local, mora_perto, deveia, trabalhou)

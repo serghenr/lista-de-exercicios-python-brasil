@@ -16,4 +16,15 @@ Faça um Programa que peça um valor e mostre na tela se o valor é positivo ou 
 
 
 def positivo_ou_negativo(n):
-    """Escreva aqui em baixo a sua solução"""
+
+    if n == 0:
+        return 'não tem positivo nem negativo'
+    elif n < 0:
+        return 'negativo'
+    elif n > 0:
+        return 'positivo'
+
+if __name__ == '__main__':
+    n = int(input('Digite um número qualquer: '))
+    msg = positivo_ou_negativo(n)
+    print(msg)

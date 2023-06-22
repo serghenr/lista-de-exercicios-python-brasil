@@ -34,4 +34,7 @@ Mostre o restultado com duas casas decimais
 
 
 def calcular_abastecimento(litros_de_combustivel: float, tipo_de_combustivel: str) -> str:
-    """Escreva aqui em baixo a sua solução"""
+
+
+
+    print(f'{} litro(s) de gasolina custa(m): R$ {}. Com {}% de desconto, fica R$ {}')

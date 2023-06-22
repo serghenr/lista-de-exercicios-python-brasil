@@ -46,4 +46,6 @@ Mostre o restultado com duas casas decimais
 
 
 def calcular_preco_da_carne(tipo_de_carne: str, kilos_de_carne: int, forma_de_pagamento: str) -> str:
-    """Escreva aqui em baixo a sua solução"""
+
+    print(f'{:.2f} kg de Filé Duplo a R$ {:.2f}/kg saem a R$ {:.2f}. Não há desconto, pagamento feito com dinheiro')
+    print(f'{:.2f} kg de Picanha a R$ {:.2f}/kg saem a R$ {:.2f}. Com desconto de 5% pelo pagamento feito com cartão tabajara, fica R$ {:.2f}')

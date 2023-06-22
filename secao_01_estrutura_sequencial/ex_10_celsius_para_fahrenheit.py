@@ -15,6 +15,10 @@ Mostrar apenas valor inteiro da temperatura
 
 """
 
+""
+
 
 def transformar_para_fahrenheit():
-    """Escreva aqui em baixo a sua solução"""
+    c = int(input('O valor da temperatura em °C: '))
+    f = ((c/5) * 9) + 32
+    print(f'Essa temperatura é de {f:.0f} Fahrenheit')

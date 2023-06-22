@@ -20,4 +20,18 @@ Obs: 0 <= nota <= 10
 
 
 def notas_parciais(nota_1, nota_2):
-    """Escreva aqui em baixo a sua solução"""
+
+    if (nota_1 + nota_2) / 2 == 10:
+        return 'Aprovado com Distinção'
+    elif (nota_1 + nota_2) / 2 >= 7:
+        return 'Aprovado'
+    else:
+        return 'Reprovado'
+
+if __name__ == '__main__':
+
+    nota_1 = int(input('Digite a 1° nota: '))
+    nota_2 = int(input('Digite a 2° nota: '))
+
+    msg = notas_parciais(nota_1, nota_2)
+    print(msg)

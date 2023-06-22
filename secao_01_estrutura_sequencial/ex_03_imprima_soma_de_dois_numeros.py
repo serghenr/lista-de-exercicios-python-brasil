@@ -12,6 +12,11 @@ Faça um Programa que peça dois números inteiros e imprima a soma.
 
 """
 
+""
+
 
 def imprima_a_soma_de_dois_numeros():
-    """Escreva aqui em baixo a sua solução"""
+    a = int(input(''))
+    b = int(input(''))
+    s = a + b
+    print(f'A soma dos dois números informados é {s}')

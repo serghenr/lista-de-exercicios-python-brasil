@@ -58,4 +58,9 @@ Mostre o restultado com duas casas decimais
 
 
 def calcular_preco_da_compra(kilos_de_morango: int, kilos_de_maca: int):
-    """Escreva aqui em baixo a sua solução"""
+
+    print(f"""
+    (+)  Morango  - valor:  R$ {} - quantidade:  {} kg - preço: R$ {}/kg
+    (+)  Maça     - valor:  R$ {} - quantidade:  {} kg - preço: R$ {}/kg
+    (-)  Desconto - valor:  R$ {}
+              Valor Total:  R$ {}""")

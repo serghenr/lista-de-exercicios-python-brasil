@@ -52,4 +52,44 @@ até R$ 99999,99
 
 
 def calcular_salario_liquido(valor_hora: float, horas_trabalhadas: int):
-    """Escreva aqui em baixo a sua solução"""
+
+    salario_bruto = horas_trabalhadas * valor_hora
+
+    if salario_bruto <= 900:
+        alicota_ir = 0
+    elif 900 < salario_bruto <= 1500:
+        alicota_ir = 0.05
+    elif 1500 < salario_bruto <= 2500:
+        alicota_ir = 0.1
+    else:
+        alicota_ir = 0.2
+
+    desconto_de_ir = salario_bruto * alicota_ir
+    inss = salario_bruto * 0.1
+    sindicato = salario_bruto * 0.03
+    fgts = salario_bruto * 0.11
+    total_de_descontos = inss + sindicato + desconto_de_ir
+
+    recuo_esq = 34
+    recuo_dir = 3
+
+    l1 = (f"Salário Bruto: (R$ {valor_hora:.2f} * {horas_trabalhadas:.0f})", f': R$ {salario_bruto:>8.2f}')
+    l2 = (f"(-) IR ({alicota_ir*100:.0f}%)", f': R$ {desconto_de_ir:>8.2f}')
+    l3 = (f"(-) INSS (10%)", f': R$ {inss:>8.2f}')
+    l4 = (f"(-) Sindicato (3%)", f': R$ {sindicato:>8.2f}')
+    l5 = (f"FGTS (11%)", f': R$ {fgts:>8.2f}')
+    l6 = (f"Total de descontos", f': R$ {total_de_descontos:>8.2f}')
+    l7 = (f"Salário Liquido", f': R$ {(salario_bruto - total_de_descontos):>8.2f}')
+
+    lista = [l1, l2, l3, l4, l5, l6, l7]
+
+    for i, j in lista:
+        print(f'{i:<{recuo_esq}}', f'{j:>{recuo_dir}}')
+
+
+if __name__ == '__main__':
+
+    valor_hora = float(input('Digite o valor da hora de trabalho: '))
+    horas_trabalhadas = int(input('Digite a quantidade de horas trabalhadas: '))
+
+    msg = calcular_salario_liquido(valor_hora, horas_trabalhadas)

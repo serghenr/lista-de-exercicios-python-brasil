@@ -15,5 +15,25 @@ Faça um Programa que peça dois números e imprima o maior deles.
 """
 
 
+""
+
+
 def maior_de_dois_numeros(x, y):
-    """Escreva aqui em baixo a sua solução"""
+
+    if x > 0 and y > 0:
+        if y > x:
+            print(y)
+    elif x < 0 and y < 0:
+        if x > y:
+            print(x)
+    elif x < 0 < y:
+        if x < y:
+            print(y)
+    else:
+        print(x)
+
+if __name__ == '__main__':
+    x = int(input('X = 1° número: '))
+    y = int(input('Y = 2° número: '))
+
+    msg = maior_de_dois_numeros(x,y)
