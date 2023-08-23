@@ -69,6 +69,7 @@ def calcular_conceito(nota_1: float, nota_2: float):
           f'Conceito: {conceito}\n'
           f'Status: {status}')
 
+
 if __name__ == '__main__':
 
     nota_1 = float(input('Digite a 1° nota: '))
