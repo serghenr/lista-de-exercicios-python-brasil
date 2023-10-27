@@ -25,3 +25,6 @@ import datetime
 
 def validar_data(data: str):
 
+    try:
+        datetime.datetime.strptime(data, "%d/%m/%a")
+        return 'Data válida'
